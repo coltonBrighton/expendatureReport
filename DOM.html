@@ -1,15 +1,21 @@
+<!-- Using HTML, Bootstrap, and JavaScript create a single page website that contains the following:
+
+A Bootstrap styled table representing your choice of data.
+A Bootstrap styled form that allows a user to add a new row to the table when clicking on submit
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM</title>
+    <!-- link to bootstrap css page -->
     <link
       rel="stylesheet"
       href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
   </head>
-  <body class="container">
+  <body class="container bg-light">
     <br />
     <!-- create a card to hold the date, product text box, and amount textbox -->
     <div class="card">
@@ -19,7 +25,7 @@
             <div class="form-group">
               <!-- give user ability to set purchse date -->
               <label for="purchase-date"> Date of Purchase </label>
-              <input type="date" class="form-control" 232222="purchase-date" />
+              <input type="date" id="purchase-date" class="form-control" />
             </div>
           </div>
           <div class="col=sm">

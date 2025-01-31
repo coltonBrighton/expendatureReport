@@ -10,7 +10,7 @@ let id = 0;
 // create new row and add to table
 document.getElementById("add").addEventListener("click", () => {
   // create a new date for the items purchsed
-  let purchaseDate = new Date();
+  let purchaseDateInput = document.getElementById("purchase-date");
 
   // access table id's
   let table = document.getElementById("expense");
@@ -19,11 +19,14 @@ document.getElementById("add").addEventListener("click", () => {
   let row = table.insertRow(1);
   row.setAttribute("id", `item-${id}`);
 
-  // format date to yy/mm/dd
-  row.insertCell(0).innerHTML = document.getElementById("new-product").value;
-  row.insertCell(1).innerHTML = `${purchaseDate.getFullYear()}-${
-    purchaseDate.getMonth() + 1
-  }-${purchaseDate.getDate()}`;
+  // format date to mm/dd/yyyy
+  let purchaseDate = new Date(purchaseDateInput.value);
+  let formattedDate = `${purchaseDate.getMonth() + 1}/${purchaseDate.getDate() + 1}/${purchaseDate.getFullYear()}`;
+
+  row.insertCell(0).innerHTML = formattedDate
+
+  // add product to table
+  row.insertCell(1).innerHTML = document.getElementById("new-product").value;
 
   // amount variable to hold product amount
   let amount = document.getElementById("new-amount").value;
