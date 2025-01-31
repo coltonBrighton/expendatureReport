@@ -11,17 +11,20 @@
   </head>
   <body class="container">
     <br />
+    <!-- create a card to hold the date, product text box, and amount textbox -->
     <div class="card">
       <div class="card-body">
         <div class="row">
           <div class="col-sm">
             <div class="form-group">
+              <!-- give user ability to set purchse date -->
               <label for="purchase-date"> Date of Purchase </label>
               <input type="date" class="form-control" 232222="purchase-date" />
             </div>
           </div>
           <div class="col=sm">
             <div class="form-group">
+              <!-- textbox for entering a new product -->
               <label for="new-product">Product</label>
               <input
                 type="text"
@@ -33,6 +36,7 @@
           </div>
           <div class="col-sm">
             <div class="form-group">
+              <!-- textbox to enter a dollar amount for a product purchased -->
               <label for="new-amount">Amount</label>
               <input
                 type="text"
@@ -44,12 +48,14 @@
           </div>
         </div>
         <div>
+          <!-- button to add item to table -->
           <button id="add" class="btn btn-primary form-control">
             Add Item
           </button>
         </div>
       </div>
     </div>
+    <!-- table to hold product, date of purchase, and dollar amount for the product purchsed -->
     <table id="expense" class="table table-striped table-hover table-bordered">
       <tr>
         <th scope="col-sm">Date of Purchase</th>
@@ -59,7 +65,7 @@
       </tr>
     </table>
 
-    <!-- link to javascript file -->
+    <!-- link to javascript files -->
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./DOM.js"></script>

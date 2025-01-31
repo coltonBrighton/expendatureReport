@@ -25,14 +25,14 @@ document.getElementById("add").addEventListener("click", () => {
     purchaseDate.getMonth() + 1
   }-${purchaseDate.getDate()}`;
 
-  // row to hold product amount
+  // amount variable to hold product amount
   let amount = document.getElementById("new-amount").value;
 
-  // Automatically insert commas and format the amount
+  // format amount to USD $0,000.00
   const formattedAmount = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD'
-  }).format(amount); // Format the 'amount' to $0.00
+  }).format(amount);
   row.insertCell(2).innerHTML = `${formattedAmount}`;
 
   //   make slot for button in table
