@@ -19,7 +19,7 @@ document.getElementById("add").addEventListener("click", () => {
   let row = table.insertRow(1);
   row.setAttribute("id", `item-${id}`);
 
-  // format date to mm/dd/yyyy
+  // format date to m/d/yyyy
   let purchaseDate = new Date(purchaseDateInput.value);
   let formattedDate = `${purchaseDate.getMonth() + 1}/${purchaseDate.getDate() + 1}/${purchaseDate.getFullYear()}`;
 
